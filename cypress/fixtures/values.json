@@ -1,0 +1,4 @@
+{
+  "getToken": "https://online-store-dotnet5-prod-staging.azurewebsites.net/api-frontend/Authenticate/GetToken",
+  "createUser": "https://online-store-dotnet5-prod-staging.azurewebsites.net/api-frontend/Customer/Register"
+}
