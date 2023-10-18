@@ -1,5 +1,5 @@
 import API from "../../fixtures/values.json"
-var createMobilePhoneNumber = require("random-mobile-numbers");
+import { PhoneNumber } from "phone-number-generator";
 var random = require("random-name");
 var randomString = require("randomized-string");
 let globalToken;
@@ -22,12 +22,25 @@ class request {
   }
 
   createUser() {
+
+    function generateRandomEgyptianPhoneNumber() {
+      const prefixes = ["010", "011", "012", "015"];
+      const randomNumber = Math.floor(Math.random() * 100000000);
+    
+      // Generate a random prefix and add it to the random number
+      const randomPrefix = prefixes[Math.floor(Math.random() * prefixes.length)];
+      const phoneNumber = randomPrefix + randomNumber.toString().padStart(8, "0");
+    
+      return phoneNumber;
+    }
+    const randomPhoneNumber = generateRandomEgyptianPhoneNumber();
+    cy.log(randomPhoneNumber)
     // constructors
     
     let firstName = random.first();
     let lastName = random.last();
     let emailAdd = firstName + "." + lastName + "@mailinator.com";
-    let mobNumber = createMobilePhoneNumber("EG");
+    let mobNumber = randomPhoneNumber
     let PasswordValue = "123456";
     let randomValue = "1";
     let birthYear = "1991";
