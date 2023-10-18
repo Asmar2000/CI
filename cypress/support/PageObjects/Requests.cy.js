@@ -1,5 +1,4 @@
 import API from "../../fixtures/values.json"
-import { PhoneNumber } from "phone-number-generator";
 var random = require("random-name");
 var randomString = require("randomized-string");
 let globalToken;
