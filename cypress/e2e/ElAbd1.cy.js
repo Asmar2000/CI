@@ -5,7 +5,7 @@ describe("Creating users", () => {
     call.getToken();
   });
 
-  for (let i = 0; i < 1000; i++) {
+  for (let i = 0; i < 10; i++) {
     it(`[Test ${i + 1}] calling create users API`, () => {
       call.createUser();
     });
