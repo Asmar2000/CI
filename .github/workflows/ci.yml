@@ -1,5 +1,6 @@
 name: End-to-end tests
-on: schedule:
+on: 
+  schedule:
     - cron: '*/360 * * * *'
 jobs:
   cypress-run:
