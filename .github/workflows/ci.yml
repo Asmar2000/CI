@@ -1,7 +1,7 @@
 name: Create users
 on:
   schedule:
-    - cron: "*/1 * * * *"
+    - cron: "*/360 * * * *"
   workflow_dispatch:
 
 jobs:
