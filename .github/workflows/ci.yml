@@ -1,9 +1,6 @@
-name: creating users
-on: push
-  schedule:
+name: End-to-end tests
+on: schedule:
     - cron: '*/360 * * * *'
-    workflow_dispatch:
-
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
@@ -12,5 +9,5 @@ jobs:
         uses: actions/checkout@v4
       # Install npm dependencies, cache them correctly
       # and run all Cypress tests
-      - name: Create users
+      - name: Cypress run
         uses: cypress-io/github-action@v6
