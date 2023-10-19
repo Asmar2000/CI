@@ -1,8 +1,7 @@
----
 name: Create users
 on:
   schedule:
-    - cron: "1 3 * * *"
+    - cron: "*/360 * * * *"
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
