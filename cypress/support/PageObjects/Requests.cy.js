@@ -25,15 +25,12 @@ class request {
     function generateRandomEgyptianPhoneNumber() {
       const prefixes = ["010", "011", "012", "015"];
       const randomNumber = Math.floor(Math.random() * 100000000);
-    
-      // Generate a random prefix and add it to the random number
       const randomPrefix = prefixes[Math.floor(Math.random() * prefixes.length)];
       const phoneNumber = randomPrefix + randomNumber.toString().padStart(8, "0");
     
       return phoneNumber;
     }
     const randomPhoneNumber = generateRandomEgyptianPhoneNumber();
-    cy.log(randomPhoneNumber)
     // constructors
     
     let firstName = random.first();
