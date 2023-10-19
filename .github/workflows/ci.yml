@@ -1,9 +1,9 @@
 name: creating users
-on: 
+on: push
   schedule:
     - cron: '*/360 * * * *'
     workflow_dispatch:
-    
+
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
