@@ -27,8 +27,7 @@ class request {
       const randomNumber = Math.floor(Math.random() * 100000000);
       const randomPrefix = prefixes[Math.floor(Math.random() * prefixes.length)];
       const phoneNumber = randomPrefix + randomNumber.toString().padStart(8, "0");
-    
-      return phoneNumber;
+    return phoneNumber;
     }
     const randomPhoneNumber = generateRandomEgyptianPhoneNumber();
     // constructors
