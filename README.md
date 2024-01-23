@@ -1,21 +1,21 @@
-# CI
+# Automated User Creation for Notification Testing
 
-Objective:
+## Overview
 
-Investigated system behavior post-creation of 200k+ users to validate notification delivery.
-Implementation:
+This project leverages Cypress, GitHub Actions, and cypress-parallel to automate the creation of 200k+ users through a user creation API. The primary goal is to observe the system's behavior under high load conditions and ensure the successful delivery of notifications to all users. The workflow is configured to run in parallel for efficient testing, and a cronjob triggers it every 6 hours to simulate continuous load testing.
 
-Automated user creation using Cypress by invoking the user creation API.
-Integrated code with GitHub Actions for parallel execution using cypress-parallel.
-Configured a cronjob to trigger workflow every 6 hours, emulating continuous load testing.
-Monitored system logs to ensure successful notification delivery for all users.
-Technologies:
+## Project Structure
 
-Cypress for end-to-end testing.
-GitHub Actions for continuous integration.
-cypress-parallel for parallel test execution.
-Results:
+- **cypress/**
+ - **e2e/**: Holds Cypress test scripts.
+  - **fixtures/**: Contains data for test scenarios.
+  - **support/**: Includes utility files and custom commands.
 
-Provided valuable insights into system behavior under high load conditions.
-Verified robust notification functionality through thorough testing.
-Demonstrated expertise in test automation, CI/CD, and load testing.
+- **.github/**
+  - **workflows/**: GitHub Actions workflow configuration.
+
+- **cypress.json**: Cypress configuration file.
+- **.gitignore**: Specifies files to be ignored by Git.
+- **.github/workflows/test.yml**: GitHub Actions workflow configuration for parallel test execution.
+
+
